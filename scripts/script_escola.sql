@@ -1,4 +1,5 @@
 /*mysql -u root -p*/
+/*USE escola_a30n;*/
 CREATE DATABASE escola_a30;
 USE escola_a30;
 
@@ -6,6 +7,16 @@ CREATE TABLE bairro(
     cod_bairro INT AUTO_INCREMENT,
     nome_bairro VARCHAR(45),
     PRIMARY KEY(cod_bairro)
+);
+
+CREATE TABLE usuario(
+id_usuario INT AUTO_INCREMENT,
+usuario VARCHAR(45),	
+email VARCHAR(75),
+bairro INT,	
+senha VARCHAR(6),
+FOREIGN KEY (bairro) REFERENCES bairro(cod_bairro),	
+PRIMARY KEY (id_usuario)	
 );
 
 CREATE TABLE turma(
@@ -19,6 +30,8 @@ CREATE TABLE turma(
 CREATE TABLE professor(
     cod_professor INT AUTO_INCREMENT,
     nome_professor VARCHAR(45),
+    bairro INT,
+    FOREIGN KEY (bairro) REFERENCES bairro(cod_bairro),
     PRIMARY KEY(cod_professor)
 );
 
@@ -56,14 +69,13 @@ INSERT INTO bairro(nome_bairro) VALUES ("Alagoinha"),("Asa Sul"),("Asa Norte"),(
 INSERT INTO disciplina(nome_disciplina) VALUES ("HTML"),("CSS"),("Javascript"),("PHP"),("MySQL"),("Java SE"),("Java EE");
 
 INSERT INTO curso(nome_curso) VALUES ("Web design"),("Frontend"),("Backend"),("Web developer"),("DBA"),("Programção");
-/*mysql -u root -p*/
-/*USE escola_a30n;*/
-CREATE TABLE usuario(
-id_usuario INT AUTO_INCREMENT,
-usuario VARCHAR(45),	
-email VARCHAR(75),	
-senha VARCHAR(6),	
-PRIMARY KEY (id_usuario)	
-);
 
-SELECT senha FROM usuario WHERE usuario = 'Cristina';
+INSERT INTO professor(nome_professor,bairro) VALUES ("Gembala",2),("Trombolinha",1),("Felix",2),("Tom",3),("Frajola",4);
+
+INSERT INTO usuario(usuario,email,bairro,senha) VALUES ("Bruce","bruce@ml5w3s",2,"12345"),("Bruce","bruce@ml5w3s",1,"12345"),("Bruce","bruce@ml5w3s",2,"12345"),("Bruce","bruce@ml5w3s",3,"12345"),("Bruce","bruce@ml5w3s",4,"12345");
+
+ALTER TABLE professor ADD bairro INT;
+
+ALTER TABLE professor ADD FOREIGN KEY (bairro) REFERENCES bairro(cod_bairro);
+
+
