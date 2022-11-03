@@ -15,7 +15,5 @@ if($usuario == $user and $pass==md5($senha)) {
 	$_SESSION['usuario'] = $usuario;
 } else {
 	header('Location: ../formulario/form_login.php');
-	echo "<script>alert('Usuario ou senha incorretos');</script>";
 }
-
 ?>

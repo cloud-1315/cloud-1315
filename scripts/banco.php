@@ -9,6 +9,7 @@ if($row == 1) {
 } else {
 	$_SESSION['nao_autenticado'] = true;
 	header('Location: index.php');
+	echo "<script>alert('Usuario ou senha incorretos');</script>";	
 	exit();
 }
 
