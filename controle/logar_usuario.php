@@ -1,5 +1,7 @@
 <?php
 include("conexao.php");
+$conn = conectar();
+
 session_start();
 $user = $_POST["txt_user"];
 $pass = md5($_POST["txt_pass"]);
@@ -12,7 +14,6 @@ $usuario = $row[usuario];
 $senha = $row[senha];
 
 if($usuario == $user and $pass==md5($senha)) {		
-
 	$_SESSION['usuario'] = $user;
 	$_SESSION['senha'] = $pass;
 	header('location:../index.html');

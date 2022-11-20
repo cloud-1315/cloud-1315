@@ -1,6 +1,6 @@
 <?php
 include("conexao.php");
-
+$conn = conectar();
 $professor = $_POST["txt_professor"];
 $bairro = $_POST["cbx_bairro"];
 

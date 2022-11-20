@@ -1,6 +1,6 @@
 <?php
 include("conexao.php");
-
+$conn = conectar();
 $user = $_POST["txt_user"];
 $mail = $_POST["txt_mail"];
 $pass = md5($_POST["txt_pass"]);
