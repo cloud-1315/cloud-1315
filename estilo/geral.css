@@ -1,78 +1,24 @@
 *{
-	margin:100;    /* resetar margens do navegador */
-	padding:100;   /*resetar espaços */
+	margin:0px;    /* resetar margens do navegador */
+	padding:0px;   /*resetar espaços */
 }
 body{
-	background-image: linear-gradient(black,#005555,orange,yellow); /* cor do fundo da página*/
+	background-image: conic-gradient(#ffffff,#dddddd,#eeeeee); /* cor do fundo da página*/
 }
-.valores{
-	text-align: right;
-}
-.titulo{
-	text-align: left;
-}
-.botoes{
-	text-align: right;
-}
-.tabrecibo{
-	border-collapse: collapse;
-}
-.linharecibo{
-	border-bottom: 1px solid black;
-}
-#flex-container {
-    display: flex;
-    flex-direction: row;
-}
-#recibox{
-	width:310px; /*largura do bloco de conteúdo */
-	height:0 auto; /* altura autmomática para preenchimento de conteúdo */
+h2{
+	margin-top:30px; /* margem do topo */
 	margin-left:30px; /* margem esquerda */
-	padding:20px 20px 20px 20px; /* margens internas do bloco - superior, direito, inferior e esquerdo 20px. */
-	background-color:white; /* cor do box */
-	border-radius:15px; /* arrendondamento de bordas do box */
-	box-shadow:2px 4px 8px black; /* sombra do box - tamanho, deslocamento, enevoamente e cor */
-}
-#box{  /* div id - sempre idenficada pelo símbolo "#" */
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	width:600px; /*largura do bloco de conteúdo */
-	height:0 auto; /* altura autmomática para preenchimento de conteúdo */
-	margin-left:30px; /* margem esquerda */
-	padding:20px 20px 20px 20px; /* margens internas do bloco - superior, direito, inferior e esquerdo 20px. */
-	background-color:white; /* cor do box */
-	border-radius:15px; /* arrendondamento de bordas do box */
-	box-shadow:2px 4px 8px black; /* sombra do box - tamanho, deslocamento, enevoamente e cor */
-}
-#imagem{  /* div id - sempre idenficada pelo símbolo "#" */
-	height:0 auto; /* largura do bloco de conteúdo */
-	height:0 auto; /* altura autmomática para preenchimento de conteúdo */
-	width: 1320px;
-	align-content: center;
-	margin-left:30px; /* margem esquerda */
-	padding: 20px 20px 20px 20px; /* margens internas do bloco - superior, direito, inferior e esquerdo 20px. */
-	background-color:white; /* cor do box */
-	border-radius:15px; /* arrendondamento de bordas do box */
-	box-shadow:2px 4px 8px black; /* sombra do box - tamanho, deslocamento, enevoamente e cor */
-}
-	
-h1{
-	margin-left:30px; /* margem esquerda */
+	margin-bottom:20px; /* margem da base */
 	font-family:"Arial Black", Gadget, sans-serif; /* tipo de fonte */
 	color:white; /* cor da fonte */
-	margin-top:30px; /* margem do topo */
-	margin-bottom:20px; /* margem da base */
 	text-shadow:1px 1px black; /* sombra do texto - tamanho, deslocamento e cor */
 }
-	
-h2{
+h3{
 	font-family:"tahoma"; /* tipo de fonte */
 	color:black; /* cor da fonte */
 	margin-top:10px; /* margem da base */
-	
+	padding:0px 20px 20px 20px; /* margens internas do bloco - superior, direito, inferior e esquerdo 20px. */	
 }
-
 p{
 	font-family:Arial, Helvetica, sans-serif; /* tipo de fonte */
 	color:#808080; /* cor da fonte */
@@ -91,4 +37,66 @@ a:visited{
 }
 a:hover{
 	color:cornflowerblue;
+}
+.valores{
+	text-align: right;
+}
+.titulo{
+	text-align: left;
+}
+.botoes{
+	text-align: right;
+}
+.tabrecibo{
+	border-collapse: collapse;
+}
+.linharecibo{
+	border-bottom: 1px solid black;
+}
+.box{  /* div id - sempre idenficada pelo símbolo "#" */
+	margin-left: auto;
+	margin-right: auto;
+	width:17%; /*largura do bloco de conteúdo */
+	text-align: center;
+	height:0 auto; /* altura autmomática para preenchimento de conteúdo */
+	padding:20px 20px 20px 20px; /* margens internas do bloco - superior, direito, inferior e esquerdo 20px. */
+	background-color:white; /* cor do box */
+	border-radius:15px; /* arrendondamento de bordas do box */
+	box-shadow:2px 4px 8px black; /* sombra do box - tamanho, deslocamento, enevoamente e cor */
+}
+.boxinterno{  /* div id - sempre idenficada pelo símbolo "#" */
+	margin-left:30px; /* margem esquerda */
+	width:600px; /*largura do bloco de conteúdo */
+	height:0 auto; /* altura autmomática para preenchimento de conteúdo */
+	padding:20px 20px 20px 20px; /* margens internas do bloco - superior, direito, inferior e esquerdo 20px. */
+	background-color:white; /* cor do box */
+	border-radius:15px; /* arrendondamento de bordas do box */
+	box-shadow:2px 4px 8px black; /* sombra do box - tamanho, deslocamento, enevoamente e cor */
+}
+#backhome{
+	background-image: linear-gradient(black,#005555,orange,yellow); /* cor do fundo da página*/
+}
+#flex-container {
+    display: flex;
+    flex-direction: row;
+}
+#recibox{
+	width:310px; /*largura do bloco de conteúdo */
+	height:0 auto; /* altura autmomática para preenchimento de conteúdo */
+	margin-left:30px; /* margem esquerda */
+	padding:20px 20px 20px 20px; /* margens internas do bloco - superior, direito, inferior e esquerdo 20px. */
+	background-color:white; /* cor do box */
+	border-radius:15px; /* arrendondamento de bordas do box */
+	box-shadow:2px 4px 8px black; /* sombra do box - tamanho, deslocamento, enevoamente e cor */
+}
+#imagem{  /* div id - sempre idenficada pelo símbolo "#" */
+	height:0 auto; /* altura autmomática para preenchimento de conteúdo */
+	width: 92%;
+	text-align: center;
+	align-content: center;
+	margin-left:30px; /* margem esquerda */
+	padding: 20px 20px 20px 20px; /* margens internas do bloco - superior, direito, inferior e esquerdo 20px. */
+	background-color:white; /* cor do box */
+	border-radius:15px; /* arrendondamento de bordas do box */
+	box-shadow:2px 4px 8px black; /* sombra do box - tamanho, deslocamento, enevoamente e cor */
 }

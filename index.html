@@ -6,86 +6,58 @@
 	<title>Projeto PHP</title>
 	<link rel="stylesheet" type="text/css" href="estilo/geral.css">
 </head>
-<body>
-
-<table><tr><th class="titulo" width="50%"><h1>SISTEMA DE CONTROLE ESCOLA A30</h1></th>
+<body id="backhome">
+<header>
+<table><tr><th class="titulo" width="50%"><h2>SISTEMA DE CONTROLE ESCOLA A30</h2></th>
 		<th width="1%"><a href="/escola_a30/formulario/cad_usuario.php">Cadastro</a></th>
 		<th width="1%"><a href="/escola_a30/formulario/form_login.php">Login</a></th></tr>
 </table>
-
+</header>
 <div id="flex-container">
-<div id="box" class="barra">
-<nav>
-	<h2>Cadastros</h2>
-	<table>
-	<tr>
-		<td><a href="/escola_a30/formulario/cad_bairro.php"><div>Bairro</div></a></td>
-		<td><a href="/escola_a30/formulario/cad_curso.php"><div>Curso</div></a></td>
-		<td><a href="/escola_a30/formulario/cad_professor.php"><div>Professor</div></a></td>
-	</tr>
-	<tr>
-		<td><a href="/escola_a30/formulario/cad_aluno.php"><div>Aluno</div></a></td>
-		<td><a href="/escola_a30/formulario/cad_turma.php"><div>Turma</div></a></td>
-		<td><a href="/escola_a30/formulario/cad_disciplina.php"><div>Disciplina</div></a></td>
-	</tr>
-	</table>
-</nav>
+<article class="box">
+	<h3>Cadastros</h3>
+	<nav><a href="/escola_a30/formulario/cad_bairro.php">Bairro</a> |
+	<a href="/escola_a30/formulario/cad_curso.php">Curso</a> |
+	<a href="/escola_a30/formulario/cad_professor.php">Professor</a></nav>
+	<br>
+	<nav><a href="/escola_a30/formulario/cad_aluno.php">Aluno</a> |
+	<a href="/escola_a30/formulario/cad_turma.php">Turma</a> |
+	<a href="/escola_a30/formulario/cad_disciplina.php">Disciplina</a></nav>
+</article>
+<article class="box">
+	<h3>consulta</h3>
+	<nav><a href="/escola_a30/consulta/consultar_bairros_aluno.php">Bairro</a> |
+	<a href="/escola_a30/consulta/consultar_cursos_valor.php">Curso</a> |
+	<a href="/escola_a30/consulta/form_com_professor.php">Professor</a></nav>
+	<br>
+	<nav><a href="/escola_a30/consulta/consultar_media_aluno.php">Aluno</a> |
+	<a href="/escola_a30/consulta/con_turma.php">Turma</a> |
+	<a href="/escola_a30/consulta/form_finalizar_disciplina.php">Recibos</a></nav>
+</article>
+<article class="box">
+	<h3>Atualizações</h3>
+	<nav><a href="/escola_a30/formulario/up_bairro.php">Bairro</a> |
+	<a href="/escola_a30/formulario/up_curso.php">Curso</a> |
+	<a href="/escola_a30/formulario/up_professor.php">Professor</a></nav>
+	<br>
+	<nav><a href="/escola_a30/formulario/up_aluno.php">Aluno</a> |
+	<a href="/escola_a30/formulario/up_turma.php">Turma</a> |
+	<a href="/escola_a30/formulario/up_disciplina.php">Locação</a></nav>
+</article>
+<article class="box">
+	<h3>Exclusão</h3>
+	<nav><a href="/escola_a30/formulario/del_bairro.php">Bairro</a> |
+	<a href="/escola_a30/formulario/del_curso.php">curso</a> |
+	<a href="/escola_a30/formulario/del_professor.php">Professor</a></nav>
+	<br>
+	<nav><a href="/escola_a30/formulario/del_aluno.php">Aluno</a> |
+	<a href="/escola_a30/formulario/del_turma.php">Turma</a> |
+	<a href="/escola_a30/formulario/del_disciplina.php">Disciplina</a></nav>
+</article>
 </div>
-<div id="box" class="barra">
-<nav>
-	<h2>consulta</h2>
-	<table>
-		<tr>
-			<td><a href="/escola_a30/consulta/consultar_bairros_aluno.php"><div>Bairro</div></a></td>
-			<td><a href="/escola_a30/consulta/consultar_cursos_valor.php"><div>Curso</div></a></td>
-			<td><a href="/escola_a30/consulta/form_com_professor.php"><div>Professor</div></a></td>
-		</tr>
-		<tr>
-			<td><a href="/escola_a30/consulta/consultar_media_aluno.php"><div>Aluno</div></a></td>
-			<td><a href="/escola_a30/consulta/con_turma.php"><div>Turma</div></a></td>
-			<td><a href="/escola_a30/consulta/form_finalizar_disciplina.php"><div>Recibos</div></a></td>
-		</tr>
-		</table>
-</nav>
-</div>
-<div id="box" class="barra">
-<nav>
-	<h2>Atualizações</h2>
-	<table>
-		<tr>
-			<td><a href="/escola_a30/formulario/up_bairro.php"><div>Bairro</div></a></td>
-			<td><a href="/escola_a30/formulario/up_curso.php"><div>Curso</div></a></td>
-			<td><a href="/escola_a30/formulario/up_professor.php"><div>Professor</div></a></td>
-		</tr>
-		<tr>
-			<td><a href="/escola_a30/formulario/up_aluno.php"><div>Aluno</div></a></td>
-			<td><a href="/escola_a30/formulario/up_turma.php"><div>Turma</div></a></td>
-			<td><a href="/escola_a30/formulario/up_disciplina.php"><div>Locação</div></a></td>
-		</tr>
-		</table>
-</nav>
-</div>
-<div id="box" class="barra">
-<nav>
-	<h2>Exclusão</h2>
-	<table>
-		<tr>
-			<td><a href="/escola_a30/formulario/del_bairro.php"><div>Bairro</div></a></td>
-			<td><a href="/escola_a30/formulario/del_curso.php"><div>curso</div></a></td>
-			<td><a href="/escola_a30/formulario/del_professor.php"><div>Professor</div></a></td>
-		</tr>
-		<tr>
-			<td><a href="/escola_a30/formulario/del_aluno.php"><div>Aluno</div></a></td>
-			<td><a href="/escola_a30/formulario/del_turma.php"><div>Turma</div></a></td>
-			<td><a href="/escola_a30/formulario/del_disciplina.php"><div>Disciplina</div></a></td>
-		</tr>
-		</table>
-</nav>
-</div>
-</div>
-<br><center>
-<div id="imagem">
+<br>
+<article id="imagem">
 	<img src="/escola_a30/assets/indice.png" width="90%">
-</div></center>
+</article>
 </body>
 </html>
