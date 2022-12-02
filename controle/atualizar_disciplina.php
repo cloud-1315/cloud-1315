@@ -8,7 +8,7 @@
 	<link rel='stylesheet' type='text/css' href='../estilos/geral.css'>
 </head>
 <body>
-<h1>Atualização de bairro</h1>
+<h1>Atualização de disciplina</h1>
 <div class="flex-container">
 <div id="box" class="barra">
 <fieldset>
@@ -16,9 +16,9 @@
 include ("conexao.php");
 $conn = conectar();
 try{
-	$cod_bairro = $_POST['cbx_bairro'];	
-	$up_bairro = $_POST['txt_bairro'];
-	$sql = "UPDATE bairro SET nome_bairro = '$up_bairro' WHERE cod_bairro = $cod_bairro";
+	$cod_disciplina = $_POST['cbx_disciplina'];	
+	$up_disciplina = $_POST['txt_disciplina'];
+	$sql = "UPDATE disciplina SET nome_disciplina = '$up_disciplina' WHERE cod_disciplina = $cod_disciplina";
 	$conn->query($sql);
 
 }catch(PDOException $ex){
@@ -26,7 +26,7 @@ try{
 }
 echo'
 <script>
-	alert("Registro salvo com sucesso!");
+	alert("Registro atualizado com sucesso!");
 	window.location.href = "../index.html";
 </script>
 ';

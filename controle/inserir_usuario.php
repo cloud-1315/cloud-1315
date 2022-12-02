@@ -12,7 +12,11 @@ if($pass<>$conf){
     //echo "Senhas não conferem"
 }else{
     $conn->query("INSERT INTO usuario(usuario,email,senha)VALUES('$user','$mail','$pass')");
-    echo "<script>alert('Usuario cadastrado com sucesso')</script>
-    <a href='../index.html'>Voltar</a>";
+    echo'
+    <script>
+        alert("Registro salvo com sucesso!");
+        window.location.href = "../index.html";
+    </script>
+    ';
 }
 ?>

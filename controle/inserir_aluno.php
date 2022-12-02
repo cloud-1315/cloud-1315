@@ -10,10 +10,14 @@
 include("conexao.php");
 $conn = conectar();
 try{
-$bairro = $_POST["txt_bairro"];
-	if(isset($bairro)){
-		$stm = $conn->prepare("INSERT INTO bairro(nome_bairro) VALUES (?)");
-		$stm->bindValue(1,$bairro,PDO::PARAM_STR);
+$aluno = $_POST["txt_aluno"];
+$bairro = $_POST["cbx_aluno"];
+$turma = $_POST["cbx_turma"];
+	if(isset($aluno)){
+		$stm = $conn->prepare("INSERT INTO aluno(nome_aluno,bairro_aluno,turma_aluno) VALUES (?,?,?)");
+		$stm->bindValue(1,$aluno,PDO::PARAM_STR);
+		$stm->bindValue(2,$bairro,PDO::PARAM_STR);        
+		$stm->bindValue(3,$turma,PDO::PARAM_STR);        
 		$stm->execute();
 	}
 	echo'<script>

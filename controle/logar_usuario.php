@@ -16,7 +16,12 @@ $senha = $row[senha];
 if($usuario == $user and $pass==md5($senha)) {		
 	$_SESSION['usuario'] = $user;
 	$_SESSION['senha'] = $pass;
-	header('location:../index.html');
+	echo'
+    <script>
+        alert("Acesso Liberado!");
+        window.location.href = "../index.html";
+    </script>
+    ';
 } else {
 	unset ($_session['$user'];
 	unset ($_session['$pass'];	

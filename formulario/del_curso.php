@@ -7,16 +7,16 @@
     <title>Escola A30</title>
 </head>
 <body>
-    <h2>Exclusão de professor</h2>
-    <form method="post" action="../controle/excluir_professor.php">
+    <h2>Exclusão de curso</h2>
+    <form method="post" action="../controle/excluir_curso.php">
     <fieldset>
     <?php	  
 	include ("../controle/conexao.php");
     $conn = conectar();
-	$sql = 'SELECT * FROM professor';
-	print "<select name='cbx_professor'>";
+	$sql = 'SELECT * FROM curso';
+	print "<select name='cbx_curso'>";
 	foreach ($conn->query($sql) as $row) {
-	  print "<option value='".$row['cod_professor']."'>".$row['nome_professor']."</option>";
+	  print "<option value='".$row['cod_curso']."'>".$row['nome_curso']."</option>";
 	}
 	print "</select>";
 	?>

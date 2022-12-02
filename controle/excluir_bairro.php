@@ -20,7 +20,12 @@
     }catch(PDOException $ex_){
 	    //echo 'Erro '. $ex->getMessage();
     }
-    header('Location: http://localhost/escola_a30');
+	echo'
+    <script>
+        alert("Registro excluido com sucesso!");
+        window.location.href = "../index.html";
+    </script>
+    ';
     ?>
 </body>
 </html>

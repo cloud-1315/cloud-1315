@@ -11,10 +11,10 @@
     include("conexao.php");
     $conn = conectar();
     try{
-    $disciplina = $_POST['cbx_disciplina'];
-    if(isset($disciplina)){
-        $stm = $conn->prepare("DELETE FROM disciplina WHERE cod_disciplina=?");
-        $stm->bindValue(1,$disciplina,PDO::PARAM_STR);
+    $aluno = $_POST['cbx_aluno'];
+    if(isset($aluno)){
+        $stm = $conn->prepare("DELETE FROM aluno WHERE cod_aluno=?");
+        $stm->bindValue(1,$aluno,PDO::PARAM_STR);
         $stm->execute();
     }
     }catch(PDOException $ex_){

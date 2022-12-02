@@ -8,19 +8,27 @@
    	<link rel="stylesheet" type="text/css" href="../estilo/geral.css">
 </head>
 <body>
-<h3>Cadastro de professor</h3>
-<form method="post" action="../controle/inserir_professor.php">
+<h3>Cadastro de turma</h3>
+<form method="post" action="../controle/inserir_turma.php">
 <fieldset>		
 <table>
-    <tr><td><label>Professor</label></td><td><input type="text" name="txt_professor" required></td></tr>
-    <tr><td><label>Bairro</label></td>
-        <td><?php	  
+    <tr><td><label>Professor</label></td>
+    <td><?php	  
 	include ("../controle/conexao.php");
 	$conn = conectar();
-	$sql = 'SELECT * FROM bairro';
-	print "<select name='cbx_bairro'>";
+	$sql = 'SELECT * FROM professor';
+	print "<select name='cbx_professor'>";
 	foreach ($conn->query($sql) as $row) {
-	  print "<option value='".$row['cod_bairro']."'>".$row['nome_bairro']."</option>";
+	  print "<option value='".$row['cod_professor']."'>".$row['nome_professor']."</option>";
+	}
+	print "</select>";
+	echo '</td></tr>
+    <tr><td><label>Curso</label></td>
+    <td>';	  
+	$sql = 'SELECT * FROM curso';
+	print "<select name='cbx_curso'>";
+	foreach ($conn->query($sql) as $row) {
+	  print "<option value='".$row['cod_curso']."'>".$row['nome_curso']."</option>";
 	}
 	print "</select>";
 	?></td></tr>    
