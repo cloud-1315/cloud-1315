@@ -14,15 +14,8 @@
 <table>
     <tr><td><label>Professor</label></td><td><input type="text" name="txt_professor" required></td></tr>
     <tr><td><label>Bairro</label></td>
-        <td><?php	  
-	include ("../controle/conexao.php");
-	$conn = conectar();
-	$sql = 'SELECT * FROM bairro';
-	print "<select name='cbx_bairro'>";
-	foreach ($conn->query($sql) as $row) {
-	  print "<option value='".$row['cod_bairro']."'>".$row['nome_bairro']."</option>";
-	}
-	print "</select>";
+        <td><?php
+	include_once("../modulo/mod_select_bairro.php");
 	?></td></tr>    
     <tr><td colspan="2" align="right"><input type="submit" value="Cadastrar"></td></tr>
 </table></fieldset></form></body></html>

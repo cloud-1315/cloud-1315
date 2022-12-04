@@ -15,13 +15,7 @@
     <tr><td><label>Aluno</label></td><td><input type="text" name="txt_aluno" required></td></tr>
     <tr><td><label>Bairro</label></td>
         <td><?php	  
-	include ("../controle/conexao.php");
-    $conn = conectar();
-    try{
-	$sql = 'SELECT * FROM bairro';
-	print "<select name='cbx_bairro'>";
-	foreach ($conn->query($sql) as $row) {
-	  print "<option value='".$row['cod_bairro']."'>".$row['nome_bairro']."</option>";
+	include_once("../modulo/mod_select_bairro.php");
 	}
 	print "</select></td>";
     echo "<td>Turma";

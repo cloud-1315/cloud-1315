@@ -15,13 +15,7 @@
     <tr><td><label>Usuário</label></td><td><input type="text" name="txt_user" required></td></tr>
     <tr><td><label>Bairro</label></td>
         <td><?php	  
-	include ("../controle/conexao.php");
-	$sql = 'SELECT * FROM bairro';
-	print "<select name='cbx_bairro'>";
-	foreach ($conn->query($sql) as $row) {
-	  print "<option value='".$row['cod_bairro']."'>".$row['nome_bairro']."</option>";
-	}
-	print "</select>";
+	include_once("../modulo/mod_select_bairro.php");
 	?></td></tr>    
     <tr><td><label>E-mail</label></td><td><input type="email" name="txt_mail" required></td></tr>
     <tr><td><label>Senha</label></td><td><input type="password" name="txt_pass" required></td></tr>
